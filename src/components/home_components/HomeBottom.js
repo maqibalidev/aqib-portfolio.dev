@@ -62,14 +62,9 @@ const navigate = useNavigate();
 
 <div className='website'>
 {
- website_data && website_data.length>0 ?( website_data.map((web_data)=>(
+  website_data.map((web_data)=>(
     <img src={web_data.img}/>
-  ))):(
-    <div style={{display:"flex",justifyContent:"center",alignItems:"center",margin:"50px 0px", width:"100vw"}}>
-    <div className='circular_progress'></div>
-    </div>
-    
-                  )
+  ))
 }
 </div>
 
@@ -103,9 +98,14 @@ const navigate = useNavigate();
 
 <div className='website'>
 {
-  website_data.map((web_data)=>(
+ website_data&& website_data.length >0 ? ( website_data.map((web_data)=>(
     <img src={web_data.img}/>
-  ))
+  ))):(
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center",margin:"50px 0px", width:"100vw"}}>
+    <div className='circular_progress'></div>
+    </div>
+    
+                  )
 }
 
 </div>
