@@ -16,7 +16,7 @@ useEffect(()=>{
 
 const getData = async()=>{
 
-const res =await axios.get("http://localhost:8080/project_slider");
+const res =await axios.get("https://aqib-portfolio.vercel.app/project_slider");
 
 set_sliderData(res.data);
 
@@ -30,7 +30,7 @@ useEffect(()=>{
   const getExpericene = async()=>{
 
 
-const res= await axios.get("http://localhost:8080/project_exp");
+const res= await axios.get("https://aqib-portfolio.vercel.app/project_exp");
 console.log(res.data)
 setLang(res.data);
 
