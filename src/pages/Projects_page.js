@@ -20,7 +20,7 @@ const [language,setLang]=useState([]);
     const getExpericene = async()=>{
   
   
-  const res= await axios.get("http://localhost:8080/project_exp");
+  const res= await axios.get("https://aqib-portfolio.vercel.app/project_exp");
   console.log(res.data)
   setLang(res.data);
   
@@ -32,7 +32,7 @@ const [language,setLang]=useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/projects");
+        const response = await axios.get("https://aqib-portfolio.vercel.app/projects");
         set_projects(response.data);
       } catch (error) {
         console.error("Error fetching projects:", error);

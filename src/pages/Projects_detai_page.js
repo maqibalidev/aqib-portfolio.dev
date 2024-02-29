@@ -18,10 +18,10 @@ useEffect(()=>{
 const url = new URLSearchParams(location.search);
 const getData = async()=>{
 
-const res= await axios.get("http://localhost:8080/project_screens?project_id="+url.get("project_id"));
-const res_frontend= await axios.get("http://localhost:8080/project_screens_language?project_id="+url.get("project_id")+"&type=FRONTEND");
-const res_beckend= await axios.get("http://localhost:8080/project_screens_language?project_id="+url.get("project_id")+"&type=BECKEND");
-const res_db= await axios.get("http://localhost:8080/project_screens_language?project_id="+url.get("project_id")+"&type=DATABASE");
+const res= await axios.get("https://aqib-portfolio.vercel.app/project_screens?project_id="+url.get("project_id"));
+const res_frontend= await axios.get("https://aqib-portfolio.vercel.app/project_screens_language?project_id="+url.get("project_id")+"&type=FRONTEND");
+const res_beckend= await axios.get("https://aqib-portfolio.vercel.app/project_screens_language?project_id="+url.get("project_id")+"&type=BECKEND");
+const res_db= await axios.get("https://aqib-portfolio.vercel.app/project_screens_language?project_id="+url.get("project_id")+"&type=DATABASE");
 
 setDetail(res.data);
 setFrontend(res_frontend.data);

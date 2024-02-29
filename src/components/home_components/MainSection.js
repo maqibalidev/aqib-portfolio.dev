@@ -24,7 +24,7 @@ const MainSection = () => {
     
     try {
       
-    const lang_data = await axios.get("http://localhost:8080/project_exp");
+    const lang_data = await axios.get("https://aqib-portfolio.vercel.app/project_exp");
     
     set_languages(lang_data.data);
     

@@ -25,7 +25,7 @@ const get_apps= async()=>{
 
 try {
   
-const data = await axios.get("http://localhost:8080/mobile_projects");
+const data = await axios.get("https://aqib-portfolio.vercel.app/mobile_projects");
 
 set_app_data(data.data);
 

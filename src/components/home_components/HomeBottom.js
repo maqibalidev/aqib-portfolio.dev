@@ -27,7 +27,7 @@ const HomeBottom = () => {
   
   try {
     
-  const wesite_data = await axios.get("http://localhost:8080/website_projects");
+  const wesite_data = await axios.get("https://aqib-portfolio.vercel.app/website_projects");
   
   set_website_data(wesite_data.data);
   
