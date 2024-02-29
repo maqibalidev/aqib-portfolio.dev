@@ -130,7 +130,11 @@ text-overflow: ellipsis;
 
 margin-right: 30px;
  padding-bottom: 40px;
-word-wrap:break-word;
+ width: 80vw; /* Set the width of the container */
+ word-wrap: break-word; /* Wrap long words onto the next line */
+ overflow-wrap: break-word; /* For browsers that don't support word-wrap */
+ white-space: normal; /* Allow text to wrap */
+
 }
 .slider_project_icons{
 

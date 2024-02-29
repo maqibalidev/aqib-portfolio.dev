@@ -50,7 +50,7 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
   >
     <img className='slider_img' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"5vw":"0px",width:slide.type===1?"600px":""}} />
     <div className='slider_left' style={{padding:"20px", border:detail_page?"none": "1px solid rgba(255, 255, 255, 0.185)", left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
-      <div className='slider_text' style={{ marginLeft:"30px",fontSize:"30px"}}>{slide.project_name}
+      <div className='slider_text' style={{ padding:"20px", fontSize:"30px"}}>{slide.project_name}
       <div className='slider_text' style={{fontSize:"14px", opacity:"0.7"}}>{slide.project_desc}</div>
 
       </div>
