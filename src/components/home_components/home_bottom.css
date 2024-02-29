@@ -1,0 +1,271 @@
+.bottom{
+
+    height: 100%;
+    
+    padding: 5vh;
+    }
+    
+    .bottom .container{
+        
+        background-color: rgba(255, 255, 255, 0.041);
+        padding-top:8vh;
+    }
+    
+    .bottom .container .heading{
+      font-size:9vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+    .bottom .container .middle_line{
+      position: absolute;
+      height: 4px;
+      width: 40%;
+      
+      background-color: white;
+      top: 0;
+      bottom:-1.5vh;
+    
+      margin: auto;
+      opacity: 0.5;
+    }
+    .bottom .container .center{
+    
+    display: flex;
+    
+   position: relative;
+   height: 100vh;
+    }
+
+
+    .bottom .container .center img{
+
+        width: 85vh;
+        height: 60vh;
+
+    }
+
+   
+    .bottom .container .center img:nth-child(1){
+        position: absolute;
+        top: 12vh;
+        left: 0;
+        right: 0;
+        z-index: 9; 
+        border: 2px solid white;
+        margin: auto;
+        transform: rotateZ(2deg);
+        border-radius: 10px;
+    }
+
+    .bottom .container .center img:nth-child(2){
+        position: absolute;
+        top: 22vh;
+        left: 10vh;
+        border: 2px solid white;
+        margin: auto;
+        
+        border-radius: 10px;
+    }
+    .bottom .container .center img:nth-child(3){
+        position: absolute;
+        top: 22vh;
+        border: 2px solid white;
+        right: 10vh;
+        margin: auto;
+        border-radius: 10px;
+    }
+    
+    @keyframes float22 {
+        0% {
+          transform: translateY(0) rotateY(0);
+        }
+        50% {
+          transform: translateY(-20px) rotateY(0); /* Rotate towards the screen */
+        }
+        100% {
+          transform: translateY(0) rotateY(0);
+        }
+      }
+      
+      /* Apply the animation and 3D styles to the element */
+      .website img {
+        perspective: 80vh; /* Adjust the depth of the 3D effect */
+      }
+      
+     .website img{
+        transform-style: preserve-3d;
+      }
+      
+       .website img:nth-child(2){
+        animation: float22 3s ease-in-out infinite; /* Adjust duration and timing as needed */
+      }
+     
+      .website img:nth-child(3){
+        animation: float22 4s ease-in-out infinite; /* Adjust duration and timing as needed */
+      }
+    .bottom .container .center .image_icon:nth-child(1){
+    
+    padding-top: 10vh;
+    
+    }
+    .bottom .container .center .image_icon:nth-child(3){
+    
+        padding-top: 7vh;
+        
+        }
+    
+        .bottom .container ._bottom{
+    
+    display: flex;
+    justify-content: center;
+    
+        }
+        .bottom .container ._bottom .button{
+          width: 30vh;
+          height: 6vh;
+            background-color: black;
+         
+         
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           padding-left: 30px;
+          margin-bottom: 50px;
+           padding-right: 10px;
+        }
+        .bottom .container ._bottom  .button .arrow {
+            display: flex;
+            align-items: center;
+        }
+        .bottom .container ._bottom  .button .arrow img{
+            width: 10px;
+            height: 10px;
+            filter: invert(100%);
+        }
+        .bottom .container ._bottom  .button .text{
+            font-size: 12px;
+        }
+        @media screen and (max-width: 480px) {
+
+
+          .bottom .container{
+transition: all .5s ease;
+            
+
+          }
+        
+
+          .bottom .container .heading {
+            font-size: 34px;
+          }
+          ._bottom .container .middle_line {
+            width: 60%;
+            bottom: -5px;
+          }
+          /* .bottom {
+            padding: 0px;
+          } */
+          .bottom .container .center img {
+
+            width: 320px;
+            height: 200px;
+
+          }
+
+          .bottom .container .center img:nth-child(1){
+            top: 20vh;
+            left: 20px;
+            transition: all .5s ease;
+        }
+    
+        .bottom .container .center img:nth-child(2){
+          
+            top: 25vh;
+            right: 0;
+            left: -20px;
+            margin: auto;
+            z-index: 2;
+            transition: all .5s ease;
+          
+        }
+
+       
+        .bottom .container .middle_line{
+          bottom: -1px;
+          width: 70%;
+      }
+        .bottom .container .center img:nth-child(3){
+          top: 22vh;
+          left: 5px;
+          right: 0;
+          margin: auto;
+          z-index: 3;
+          transform: rotateZ(-5deg);
+          transition: all .5s ease;
+        }
+        .bottom .container:hover {
+          .center {
+
+           height: 100vh;
+            
+          }
+          .center img:nth-child(1){
+
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: rotateZ(0deg);
+          }
+          .center img:nth-child(2){
+
+            top: 70vw;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: rotateZ(0deg);
+          }
+          .center img:nth-child(3){
+
+            bottom: -50vw;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: rotateZ(0deg);
+          }
+
+        }
+
+        @keyframes float233 {
+          0% {
+            transform: translateY(0) rotateY(0);
+          }
+          50% {
+            transform: translateY(-10px) rotateY(0); /* Rotate towards the screen */
+          }
+          100% {
+            transform: translateY(0) rotateY(0);
+          }}
+        .website img:nth-child(2){
+          animation: float23 3s ease-in-out infinite; /* Adjust duration and timing as needed */
+        }
+       
+        .website img:nth-child(3){
+          animation: float23 3s ease-in-out infinite; /* Adjust duration and timing as needed */
+        }
+        .website img:nth-child(1){
+          animation: float23 3s ease-in-out infinite; /* Adjust duration and timing as needed */
+        }
+        .bottom .container .center {
+          height: 60vh;
+        }
+        .bottom{
+          margin-top: 50px;
+        }
+        }

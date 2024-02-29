@@ -1,0 +1,85 @@
+
+.projects_heading{
+   padding-top: 100px;
+color: white;
+font-size: 24px;
+text-align: center;
+}
+
+.projects_filter_select{
+    display: flex;
+  
+    justify-content: end;
+}
+
+.filters{
+    margin: 50px 20px;
+    color: white;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 30px;
+    border-radius: 10px;
+}
+.filters span{
+    font-size: 18px;
+    padding-right: 20px;
+    
+}
+ .filters select{
+    margin-top: 10px;
+    width: 200px;
+    padding: 0px 20px;
+    font-size: 12px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 35px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #000000;
+    -webkit-appearance: none;
+    background-position-x: 170px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+ }
+
+ .filters select *{
+    background-color: #000000;
+    height: 30px;
+    color: white;
+  
+ }
+
+ .projects_page_items_container{
+    padding: 30px;
+    margin: 10px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ 
+ }
+ @keyframes progress {
+   0% {
+     rotate: -900deg;
+   }
+   50% {
+      rotate: 900deg;
+    }
+   100% {
+    rotate: -900deg;
+   }
+ }
+ 
+ 
+
+ .circular_progress{
+
+   width: 40px;
+   height: 40px;
+   border-top: 2px solid white;
+   border-radius: 50%;
+   border-bottom: 2px solid rgba(192, 192, 192, 0.356);
+   border-left: 2px solid rgba(192, 192, 192, 0.356);
+   border-right: 2px solid rgba(192, 192, 192, 0.356);
+   animation: progress 5s ease  backwards infinite;
+
+ }

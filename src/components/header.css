@@ -1,0 +1,131 @@
+
+.header{
+    display: flex;
+    height: 10vh;
+    padding-top: 10px;
+ 
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.041);
+    position: fixed;
+    z-index: 999999;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.041);
+}
+
+
+.header:hover{
+    display: flex;
+    height: 9.5vh;
+
+    background-color: rgb(7, 18, 37);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.header .left{
+    flex: 1;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.466);
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.header .center{
+    flex: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5vh;
+    color: white;
+
+}
+.header .center .items{
+    display: flex;
+    
+}
+.header .center .items a .item{
+
+    margin: 0 4vh;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    /* background-color: rgba(240, 255, 255, 0.096); */
+    transition: all 0.5s ease;
+    color: white;
+
+}
+
+
+.header .center .items .item:hover{
+   
+    padding: 5px;
+    cursor: pointer;
+    opacity: 1;
+    /* background-color: rgba(240, 255, 255, 0.096); */
+    
+    }
+.header .center .items a .active{
+    
+  
+    cursor: pointer;
+    opacity: 1;
+    /* background-color: rgba(240, 255, 255, 0.096); */
+    transition: all 0.5s ease;
+    }
+.header .center .items .item .line{
+
+  width: 60%;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s ease;
+    
+    }
+    .header .center .items .item:hover .line{
+
+        width: 100%;
+        height: 1px;
+        background-color: white;
+          
+          }
+    .header .center .items a .active .line{
+
+        width: 100%;
+        height: 1px;
+        background-color: white;
+          
+          }
+
+.header .right{
+    flex: 1;
+}
+
+@media screen and (max-width: 480px) {
+  
+    .header{
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    
+    }
+    .header .left{
+    width:15vh;
+
+}
+.header .center{
+   padding: 0;
+}
+.header .center .items a .item{
+
+  margin-left: 2vh;
+  margin-right: 2vh;
+
+}
+
+  }

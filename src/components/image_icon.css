@@ -1,0 +1,127 @@
+.image_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+.image_icon .top{
+    flex:8;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.image_icon .bottom{
+    flex: 2;
+
+
+}
+
+.image_icon .top img{
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+
+height: 59.1vh;
+width: 29.1vh;
+border-radius: 30px;
+
+
+}
+.image_icon .top .iphone{
+  height: 59.7vh;
+  width: 30vh;
+    border-radius: 25px;
+    
+}
+.image_icon .top .image{
+ 
+    border-radius: 25px;
+    
+    }
+
+  /* Define the keyframes for the floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(15deg); /* Rotate towards the screen */
+  }
+  100% {
+    transform: translateY(0) rotateY(0);
+  }
+}
+
+/* Apply the animation and 3D styles to the element */
+.image_icon {
+  perspective: 800px; /* Adjust the depth of the 3D effect */
+}
+
+.image_icon .top {
+  transform-style: preserve-3d;
+}
+
+.image_icon .top img {
+  animation: float 3s ease-in-out infinite; /* Adjust duration and timing as needed */
+}
+@media screen and (max-width: 480px) {
+  .image_icon .top .iphone{
+    height: 390px;
+    width:146px;
+      border-radius: 25px;
+      
+  }
+  .image_icon .top .image{
+   
+    height: 375px;
+    width:144px;
+      border-radius: 25px;
+      }
+  .image_icon .top img {
+
+
+    height: 400px;
+    width:150px;
+    border-radius: 30px;
+    
+  }
+  /* .image_icon .top .image{
+    height: 390px;
+    width:146px;
+      border-radius: 25px;
+      
+      } */
+      .middle .container .center .image_icon:nth-child(2) {
+        margin-left: -120px;
+        margin-top: 20px;
+      }
+      .middle .container .center .image_icon:nth-child(3) {
+        margin-left: -120px;
+        margin-top: 30px;
+       
+      }
+
+      .middle .container .center .image_icon:nth-child(1) {
+       padding-top: 30px;
+       margin-top: 30px;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotateY(0);
+        }
+        50% {
+          transform: translateY(-20px) rotateY(20deg); /* Rotate towards the screen */
+        }
+        100% {
+          transform: translateY(0) rotateY(0);
+        }
+      }
+
+      
+      .image_icon .bottom {
+        visibility: hidden;
+        height: 0px;
+           }
+}

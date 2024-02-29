@@ -1,0 +1,63 @@
+
+.experience {
+    .experience_heading{
+    display: flex;
+    justify-content: center;
+   color: white;
+align-items: center;
+padding-top: 120px;
+padding-bottom: 20px;
+    }
+}
+
+.experience .exp_items{
+
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.experience .exp_items .exp_icons_container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .experience{.exp_items{
+       
+        display: flex;
+        flex-direction: column;
+
+        .exp_icons_container{
+            width: 100vw;
+        }
+    }
+  }}
+
+  @keyframes progress {
+    0% {
+      rotate: -900deg;
+    }
+    50% {
+       rotate: 900deg;
+     }
+    100% {
+     rotate: -900deg;
+    }
+  }
+  
+  
+ 
+  .circular_progress{
+ 
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    border-bottom: 2px solid rgba(192, 192, 192, 0.356);
+    border-left: 2px solid rgba(192, 192, 192, 0.356);
+    border-right: 2px solid rgba(192, 192, 192, 0.356);
+    animation: progress 5s ease  backwards infinite;
+ 
+  }
