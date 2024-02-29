@@ -73,7 +73,7 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
 )
 :(
 
- data && data.length>0 && data[0].screen.map((slide, index) => (
+ data && data.length>0 ?( data[0].screen.map((slide, index) => (
   <div
     key={index}
     className="image"
@@ -102,7 +102,12 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
     </div> 
   }
   </div>
-))
+))):(
+  <div style={{display:"flex",justifyContent:"center",alignItems:"center",margin:"50px 0px", width:"100vw"}}>
+  <div className='circular_progress'></div>
+  </div>
+  
+                )
 
 )
 

@@ -233,7 +233,7 @@ transition: all .5s ease;
           }
           .center img:nth-child(3){
 
-            bottom: -50vw;
+            bottom: -55vw;
             left: 0;
             right: 0;
             margin: auto;
