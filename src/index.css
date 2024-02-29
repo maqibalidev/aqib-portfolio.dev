@@ -22,3 +22,15 @@ a{
   text-decoration: none;
   
 }
+.circular_progress{
+ 
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  border-bottom: 2px solid rgba(192, 192, 192, 0.356);
+  border-left: 2px solid rgba(192, 192, 192, 0.356);
+  border-right: 2px solid rgba(192, 192, 192, 0.356);
+  animation: progress 5s ease  backwards infinite;
+
+}

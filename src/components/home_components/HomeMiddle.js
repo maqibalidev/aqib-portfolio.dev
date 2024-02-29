@@ -56,9 +56,14 @@ get_apps();
         <div className='center'>
 
 {
-  app_data.map((data)=>(
+  app_data && app_data.length>0 ? (app_data.map((data)=>(
     <ImageIcon className="img_1" image={data.screen_img} icon={data.language_icon}/>
-  ))
+  ))):(
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center",margin:"50px 0px", width:"100vw"}}>
+    <div className='circular_progress'></div>
+    </div>
+    
+                  )
 }
 
         </div>
