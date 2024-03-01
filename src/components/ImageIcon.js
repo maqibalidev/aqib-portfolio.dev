@@ -8,7 +8,7 @@ const ImageIcon = ({image,icon}) => {
       
 <div className='top'>
     <img className='iphone' src={iphoneImage}/>
-    <img className='image' src={image}/>
+    <img className='image' src={image} style={{zIndex:"888"}}/>
 
 </div>
 <div className='bottom'>
