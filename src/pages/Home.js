@@ -9,6 +9,9 @@ import { SliderData } from '../components/progects_components/SliderData'
 
 const Home = () => {
   useEffect(() => {
+    document.title = "Aqib portfolio";
+  }, []);
+  useEffect(() => {
     window.scrollTo(0, 0)
     }, [])
   return (

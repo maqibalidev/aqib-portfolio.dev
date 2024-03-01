@@ -7,7 +7,9 @@ import Footer from "../components/Footer"
 import SliderComponent from '../components/progects_components/Slider_component'
 import axios from 'axios'
 const Experience = () => {
-
+  useEffect(() => {
+    document.title = "Experience";
+  }, []);
 const [languages,setLang] = useState([]);
 const [slider_data,set_sliderData] = useState([]);
 

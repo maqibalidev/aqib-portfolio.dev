@@ -12,6 +12,10 @@ import axios from "axios"
 import Projects_items from '../components/projects_components/Projects_items'
 import { Link } from 'react-router-dom'
 const Projects_page = () => {
+  useEffect(() => {
+    document.title = "Projects";
+  }, []);
+
   const [projects,set_projects] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState("");
 const [language,setLang]=useState([]);

@@ -11,10 +11,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound_page from './pages/NotFound_page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(window.screen.height);
+
 root.render(
- 
+
 <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<Home />}>
         
@@ -34,5 +35,39 @@ root.render(
  //<Projects_page/>
 //<Projects_detai_page/> 
 );
+
+// Set the website title dynamically based on the route
+function setTitleForRoute(route) {
+  let title = "Aqib portfolio";
+  switch (route) {
+    case "/":
+      title = "Home Page";
+      break;
+    case "/home":
+      title = "Home Page";
+      break;
+    case "/projects":
+      title = "Projects Page";
+      break;
+    case "/experience":
+      title = "Experience Page";
+      break;
+    case "/project_details":
+      title = "Project Details Page";
+      break;
+    default:
+      title = "404 - Not Found";
+  }
+  document.title = title;
+}
+
+
+// Listen to route changes and update title accordingly
+window.addEventListener("popstate", () => {
+  setTitleForRoute(window.location.pathname);
+});
+
+// Initial setting of title
+setTitleForRoute(window.location.pathname);
 
 reportWebVitals();

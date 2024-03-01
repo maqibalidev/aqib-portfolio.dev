@@ -6,7 +6,9 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import Header from '../components/Header';
 
 const Projects_detai_page = () => {
-
+    useEffect(() => {
+        document.title = "Project details";
+      }, []);
     const location = useLocation();
     ;
 const [detailPage,setDetail]=useState([]);
