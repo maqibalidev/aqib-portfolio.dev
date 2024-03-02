@@ -48,6 +48,9 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
       opacity: currSlide === index ? '1' : '0',
     }}
   >
+
+{
+  width>500 ?( <>
     <img className='slider_img' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"5vw":"0px",width:slide.type===1?"600px":""}} />
     <div className='slider_left' style={{padding:"20px", border:detail_page?"none": "1px solid rgba(255, 255, 255, 0.185)", left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
       <div className='slider_text' style={{ padding:"20px", fontSize:"30px"}}>{slide.project_name}
@@ -62,7 +65,46 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
       </div>
       }
 
-    </div>
+    </div> 
+  </>):(
+  <div className='container'>
+  <div className='slider_leftt' style={{ border:detail_page?"none": "1px solid rgba(255, 255, 255, 0.185)", left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
+       <div style={{paddingTop:"10p",paddingBottom:"20px"}}>
+       <div className='slider_textt' style={{ padding:"20px", fontSize:"25px"}}>{slide.project_name}
+        <div className='slider_textt' style={{fontSize:"14px", opacity:"0.7"}}>{slide.project_desc}</div>
+        </div>
+       </div>
+        </div>
+  <img className='slider_imgg' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"5vw":"0px",width:slide.type===1?"600px":""}} />
+  
+  {
+          <div className='slider_project_icons' style={{marginBottom:"30px"}}>
+        {slide.languages.map((data, i) => (
+          <Icons key={i} img={data.icon} size={width>500?40:30} />
+        ))}
+      </div>
+      }
+  </div>
+  
+  )
+}
+
+    
+    {/* <img className='slider_img' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"5vw":"0px",width:slide.type===1?"600px":""}} />
+    <div className='slider_left' style={{padding:"20px", border:detail_page?"none": "1px solid rgba(255, 255, 255, 0.185)", left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
+      <div className='slider_text' style={{ padding:"20px", fontSize:"30px"}}>{slide.project_name}
+      <div className='slider_text' style={{fontSize:"14px", opacity:"0.7"}}>{slide.project_desc}</div>
+
+      </div>
+      {
+          <div className='slider_project_icons'>
+        {slide.languages.map((data, i) => (
+          <Icons key={i} img={data.icon} size={width>500?40:30} />
+        ))}
+      </div>
+      }
+
+    </div> */}
   </div>
 )):(
   <div style={{display:"flex",justifyContent:"center",alignItems:"center",margin:"50px 0px", width:"100vw"}}>
@@ -82,7 +124,9 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
       opacity: currSlide === index ? '1' : '0',
     }}
   >
-    <img className='slider_img' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"200px":"0px",width:slide.type===1?"600px":""}} />
+   {
+    width > 500? (<>
+     <img className='slider_img' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"200px":"0px",width:slide.type===1?"600px":""}} />
     <div className='slider_left' style={{ border:detail_page?"none": "1px solid rgba(255, 255, 255, 0.185)", left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
       <div className='slider_text' style={{ marginLeft:"30px",fontSize:"30px"}}>{slide.title}
       <div className='slider_text' style={{fontSize:"14px", opacity:"0.7"}}>{slide.description}</div>
@@ -90,7 +134,22 @@ const SliderComponent = ({detail_page,sub_heading,data}) => {
       </div>
 
    
-    </div>
+    </div></>):(
+  <div className='container'>
+  <div className='slider_leftt' style={{ left:detail_page?"200px":"100px",  opacity: currSlide === index ? '1' : '0' }}>
+       <div style={{paddingTop:"10p",paddingBottom:"20px"}}>
+       <div className='slider_textt' style={{ padding:"20px", fontSize:"25px"}}>{slide.title}
+        <div className='slider_textt' style={{fontSize:"14px", opacity:"0.7"}}>{slide.description}</div>
+        </div>
+       </div>
+        </div>
+  <img className='slider_imgg' src={slide.img} alt={`Slide ${index + 1}`} style={{left:width>500?"":"0px",right:detail_page?width>500?"120px":"0px": width>500?"5vw":"0px",width:slide.type===1?"600px":""}} />
+  
+ 
+  </div>
+  
+  )
+   }
   {
     !width >500 &&   <div className='sp' style={{color:"white",position:"absolute",bottom:"100px", backgroundColor:"rgba(0, 0, 0, 0.116)",width:"100%",padding:"100px,20px",display:"flex",justifyContent:"center"}}> 
     <div className='slider_tex' style={{fontSize:"30px"}}>{slide.title}
