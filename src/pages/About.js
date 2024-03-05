@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from "../assets/Screenshot_20220728-093308_WhatsApp.jpg"
 import "./about.scss"
 import Icons from '../components/Icons'
@@ -10,6 +10,11 @@ import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 const About = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
+
     return (
         <div>
                <Header active_item={4}/>
