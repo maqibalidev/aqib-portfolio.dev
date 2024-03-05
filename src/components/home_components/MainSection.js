@@ -14,7 +14,25 @@ import aqibPic from "../../assets/Screenshot_20220728-093308_WhatsApp.jpg"
 import axios from 'axios'
 
 const MainSection = () => {
-
+    const handleHireMeClick = () => {
+        const email = 'maqibali608@gmail.com'; // Replace with your actual Gmail address
+        const subject = encodeURIComponent('Job Opportunity');
+        const body = encodeURIComponent('I am interested in discussing a job opportunity with you.');
+    
+        // Construct Gmail compose URL with sender email pre-filled
+        const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    
+        // Open Gmail compose window in a new browser tab
+        const newWindow = window.open(gmailComposeUrl, '_blank');
+        
+        // Check if the new window was successfully opened
+        if (newWindow) {
+          // New window opened successfully
+        } else {
+          // New window blocked or failed to open
+          alert("Please ensure you are logged in to your Gmail account and try again.");
+        }
+      };
 
     const [languages,set_languages] = useState([]);
 
@@ -65,8 +83,8 @@ const MainSection = () => {
 </div>
 
 
-<div className='button'>
-    <div className='text'>EXPLORE</div>
+<div className='button' onClick={handleHireMeClick}>
+    <div className='text'>HIRE ME</div>
     <div className='arrow'>
         <img src={img}/>
     </div>

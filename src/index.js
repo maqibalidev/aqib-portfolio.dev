@@ -9,6 +9,9 @@ import Projects_page from './pages/Projects_page';
 import Projects_detai_page from './pages/Projects_detai_page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound_page from './pages/NotFound_page';
+import About from './pages/About';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,6 +29,7 @@ root.render(
         <Route  path="/projects" element={<Projects_page />} />
         <Route  path="/experience" element={<Experience />} />
           <Route path="/project_details" element={<Projects_detai_page />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound_page/>} />
       </Routes>
     </BrowserRouter>
@@ -55,6 +59,9 @@ function setTitleForRoute(route) {
     case "/project_details":
       title = "Project Details Page";
       break;
+      case "/about":
+        title = "About Page";
+        break;
     default:
       title = "404 - Not Found";
   }

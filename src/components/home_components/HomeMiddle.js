@@ -2,18 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./home_middle.css"
 import ImageIcon from '../ImageIcon'
 import img from "../../assets/right-arrow.png"
-import image1 from "../../assets/Screenshot_20230322-072112_Tamir_project.jpg"
-import Icons from '../Icons'
-import reactIcon from "../../assets/icons8-react-100.png"
-import nodejsIcon from "../../assets/icons8-node-js-48.png"
-import firebaseIcon from "../../assets/icons8-firebase-48.png"
-import javaIcon from "../../assets/icons8-java-48.png"
-import mongoDbIcon from "../../assets/icons8-mongodb-48.png"
-import sqlIcon from "../../assets/icons8-my-sql-48.png"
-import flutterIcon from "../../assets/icons8-flutter-48.png"
-import aqibPic from "../../assets/Screenshot_20220728-093308_WhatsApp.jpg"
-import image2 from "../../assets/Screenshot_20230322-072442_DemoSchoolApp.jpg"
-import image3 from "../../assets/Screenshot_20230430-231117_Retrofit_practice.jpg"
+
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 const HomeMiddle = () => {

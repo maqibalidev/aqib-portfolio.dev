@@ -10,11 +10,14 @@ import mongoDbIcon from "../assets/icons8-mongodb-48.png"
 import sqlIcon from "../assets/icons8-my-sql-48.png"
 import flutterIcon from "../assets/icons8-flutter-48.png"
 import aqibPic from "../assets/Screenshot_20220728-093308_WhatsApp.jpg"
+
 const Footer = () => {
   return (
+   <>
+ 
     <div className='footer'>
-      
-      <dev className="footer_icons">
+   
+      <div className="footer_icons">
 <div className='icon_container'><Icons className="icon" img={githhub}/>
 <div className='icon_title'>
     Github
@@ -42,9 +45,10 @@ const Footer = () => {
 
 
 
-</dev>
+</div>
       
     </div>
+   </>
   )
 }
 
